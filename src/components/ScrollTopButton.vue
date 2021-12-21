@@ -1,5 +1,9 @@
 <template>
-  <button v-show="isScrolled" class="scroll__button" @click="scrollToTop">
+  <button
+    v-show="isScrolled"
+    class="scroll__button d-flex justify-content-center align-items-center"
+    @click="scrollToTop"
+  >
     <fa :icon="['fas', 'arrow-up']" />
   </button>
 </template>
