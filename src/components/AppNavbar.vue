@@ -48,6 +48,24 @@ export default {
   .navbar__link {
     &:not(:last-of-type) {
       padding-left: 100px;
+      @include responsiveScreen($smallScreen) {
+        padding-bottom: 10px;
+        &:first-of-type {
+          padding-top: 20px;
+        }
+      }
+      @include responsiveScreen($mediumScreen) {
+        padding-bottom: 10px;
+        &:first-of-type {
+          padding-top: 20px;
+        }
+      }
+      @include responsiveScreen($largeScreen) {
+        padding-bottom: 10px;
+        &:first-of-type {
+          padding-top: 20px;
+        }
+      }
     }
     a {
       color: black;

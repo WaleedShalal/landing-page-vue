@@ -9,15 +9,19 @@
         </p>
         <AllAppsLink />
         <div class="row">
-          <div class="imgs__mainWrapper col-sm-9 mx-auto">
-            <figure class="img__mainGif w-100">
-              <img class="w-100" src="../assets/header/main-gif.gif" alt="" />
-            </figure>
-            <figure class="img__dots">
-              <img src="../assets/header/Dots.png" alt="" />
-            </figure>
-            <figure class="img__ellipse">
-              <img src="../assets/header/Ellipse.png" alt="" />
+          <div class="imgs__mainWrapper col-sm-12 col-md-10 col-lg-8 mx-auto">
+            <figure class="img__mainGif mb-0">
+              <img
+                class="img__gif w-100"
+                src="../assets/header/main-gif.gif"
+                alt=""
+              />
+              <img class="img__dots" src="../assets/header/Dots.png" alt="" />
+              <img
+                class="img__ellipse"
+                src="../assets/header/Ellipse.png"
+                alt=""
+              />
             </figure>
           </div>
         </div>
@@ -26,7 +30,9 @@
     <section class="what__youNeed">
       <div class="container-fluid">
         <div class="row">
-          <div class="need__list col-sm-5">
+          <div
+            class="need__list col-sm-12 col-md-10 col-lg-5 order-sm-2 order-lg-1 mx-auto"
+          >
             <h2>كل ما تحتاجة لنمو متجرك في مكان واحد</h2>
             <p>
               مميزات سوق تطبيقات زد تساعدك في سهولة وسرعة الاستفادة من خدمات
@@ -64,15 +70,21 @@
             </ul>
             <AllAppsLink />
           </div>
-          <div class="imgs__SubWrapper col-sm-7 mx-auto">
+          <div
+            class="imgs__SubWrapper col-sm-11 col-md-10 col-lg-7 mx-auto order-sm-1 order-lg-2 mx-auto"
+          >
             <figure class="img__subGif">
-              <img class="w-100" src="../assets/body/sub-gif.gif" alt="" />
-            </figure>
-            <figure class="img__dots">
-              <img src="../assets/header/Dots.png" alt="" />
-            </figure>
-            <figure class="img__ellipse">
-              <img src="../assets/header/Ellipse.png" alt="" />
+              <img
+                class="img__gif w-100"
+                src="../assets/body/sub-gif.gif"
+                alt=""
+              />
+              <img class="img__dots" src="../assets/header/Dots.png" alt="" />
+              <img
+                class="img__ellipse"
+                src="../assets/header/Ellipse.png"
+                alt=""
+              />
             </figure>
           </div>
         </div>
@@ -146,11 +158,9 @@ export default {
 </script>
 
 <style lang="scss">
-/* // @include responsiveScreen($smallScreen) {
-// } */
 .page__header {
   padding-top: 30px;
-  padding-bottom: 110px;
+  padding-bottom: 203px;
   h1 {
     font-size: 36px;
     font-weight: 700;
@@ -160,33 +170,70 @@ export default {
   p {
     font-size: 18px;
     line-height: 34px;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
+    @include responsiveScreen($smallScreen) {
+      width: 90% !important;
+    }
+    @include responsiveScreen($mediumScreen) {
+      width: 95% !important;
+    }
+    @include responsiveScreen($largeScreen) {
+      width: 95% !important;
+    }
+    @include responsiveScreen($extraLargeScreen) {
+      width: 65% !important;
+    }
   }
   .page__appLinkWrapper {
-    margin-bottom: 85px;
+    margin-bottom: 100px;
   }
   .imgs__mainWrapper {
-    position: relative;
     .img__mainGif {
       height: 550px;
+      position: relative;
       z-index: 2;
-      img {
+      .img__gif {
         border-radius: 40px;
         height: 100%;
         object-fit: cover;
       }
+      .img__dots {
+        width: 164px;
+        height: 179px;
+        position: absolute;
+        top: -35px;
+        left: -65px;
+        z-index: -1;
+      }
+      .img__ellipse {
+        width: 367px;
+        height: 367px;
+        position: absolute;
+        bottom: -93px;
+        right: -81px;
+        z-index: -1;
+      }
+      @include responsiveScreen($mediumScreen) {
+        .img__dots {
+          left: -25px;
+        }
+        .img__ellipse {
+          bottom: -80px;
+          right: -25px;
+        }
+      }
     }
-    .img__dots {
-      position: absolute;
-      top: -40px;
-      left: -70px;
-      z-index: -1;
-    }
-    .img__ellipse {
-      position: absolute;
-      bottom: -93px;
-      right: -81px;
-      z-index: -1;
+    @include responsiveScreen($smallScreen) {
+      width: 90%;
+      .img__mainGif {
+        .img__dots {
+          left: -37px;
+        }
+        .img__ellipse {
+          bottom: -65px;
+          right: -35px;
+        }
+      }
     }
   }
 }
@@ -200,7 +247,7 @@ export default {
     h2 {
       font-size: 24px;
       font-weight: 700;
-      color: #8d5da7;
+      color: $mainColor;
       margin-bottom: 20px;
       + p {
         font-size: 16px;
@@ -233,30 +280,69 @@ export default {
     .page__appLinkWrapper {
       margin-bottom: 0;
     }
+    @include responsiveScreen($smallScreen) {
+      order: 2;
+      text-align: center;
+    }
+    @include responsiveScreen($mediumScreen) {
+      text-align: center;
+    }
+    @include responsiveScreen($largeScreen) {
+      text-align: center;
+    }
   }
   .imgs__SubWrapper {
-    position: relative;
     z-index: 10;
     .img__subGif {
       z-index: 2;
       height: 440px;
       width: 96%;
-      img {
+      position: relative;
+      .img__gif {
         border-radius: 40px;
         height: 100%;
       }
+      .img__dots {
+        position: absolute;
+        top: -42px;
+        left: -39px;
+        z-index: -1;
+      }
+      .img__ellipse {
+        position: absolute;
+        bottom: -84px;
+        right: -55px;
+        z-index: -1;
+      }
+      @include responsiveScreen($mediumScreen) {
+        width: 100%;
+        margin-bottom: 100px;
+        .img__dots {
+          left: -25px;
+        }
+        .img__ellipse {
+          bottom: -80px;
+          right: -25px;
+        }
+      }
+      @include responsiveScreen($largeScreen) {
+        margin-bottom: 100px;
+      }
     }
-    .img__dots {
-      position: absolute;
-      top: -40px;
-      left: 0px;
-      z-index: -1;
-    }
-    .img__ellipse {
-      position: absolute;
-      bottom: -84px;
-      right: -45px;
-      z-index: -1;
+    @include responsiveScreen($smallScreen) {
+      order: 1;
+      width: 90%;
+      margin-bottom: 100px;
+      .img__subGif {
+        width: 100%;
+        .img__dots {
+          left: -37px;
+        }
+        .img__ellipse {
+          bottom: -65px;
+          right: -35px;
+        }
+      }
     }
   }
 }
@@ -286,6 +372,15 @@ export default {
         }
       }
     }
+  }
+  @include responsiveScreen($smallScreen) {
+    padding-top: 50px;
+  }
+  @include responsiveScreen($mediumScreen) {
+    padding-top: 50px;
+  }
+  @include responsiveScreen($largeScreen) {
+    padding-top: 50px;
   }
 }
 </style>
