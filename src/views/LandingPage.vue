@@ -9,7 +9,7 @@
         </p>
         <AllAppsLink />
         <div class="row">
-          <div class="header__imgMainWrapper col-sm-9 mx-auto">
+          <div class="imgs__mainWrapper col-sm-9 mx-auto">
             <figure class="img__mainGif w-100">
               <img class="w-100" src="../assets/header/main-gif.gif" alt="" />
             </figure>
@@ -64,7 +64,7 @@
             </ul>
             <AllAppsLink />
           </div>
-          <div class="header__imgSubWrapper col-sm-7 mx-auto">
+          <div class="imgs__SubWrapper col-sm-7 mx-auto">
             <figure class="img__subGif">
               <img class="w-100" src="../assets/body/sub-gif.gif" alt="" />
             </figure>
@@ -145,142 +145,147 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+/* // @include responsiveScreen($smallScreen) {
+// } */
 .page__header {
   padding-top: 30px;
   padding-bottom: 110px;
+  h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #8d5da7;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 34px;
+    margin-bottom: 40px;
+  }
+  .page__appLinkWrapper {
+    margin-bottom: 85px;
+  }
+  .imgs__mainWrapper {
+    position: relative;
+    .img__mainGif {
+      height: 550px;
+      z-index: 2;
+      img {
+        border-radius: 40px;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .img__dots {
+      position: absolute;
+      top: -40px;
+      left: -70px;
+      z-index: -1;
+    }
+    .img__ellipse {
+      position: absolute;
+      bottom: -93px;
+      right: -81px;
+      z-index: -1;
+    }
+  }
 }
-.page__header h1 {
-  font-size: 36px;
-  font-weight: 700;
-  color: #8d5da7;
-  margin-bottom: 20px;
-}
-.page__header p {
-  font-size: 18px;
-  line-height: 34px;
-  margin-bottom: 40px;
-}
-.page__header .page__appLinkWrapper {
-  margin-bottom: 85px;
-}
-.header__imgMainWrapper {
-  position: relative;
-  /* width: 847px; */
-}
-.img__mainGif {
-  height: 550px;
-  z-index: 2;
-}
-.img__mainGif img {
-  border-radius: 40px;
-  height: 100%;
-  object-fit: cover;
-}
-.header__imgMainWrapper .img__dots {
-  position: absolute;
-  top: -40px;
-  left: -70px;
-  z-index: -1;
-}
-.header__imgMainWrapper .img__ellipse {
-  position: absolute;
-  bottom: -93px;
-  right: -81px;
-  z-index: -1;
-}
+
 .what__youNeed {
   padding-top: 58px;
   padding-bottom: 58px;
   background-color: #fafafc;
+  .need__list {
+    padding-right: 25px;
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #8d5da7;
+      margin-bottom: 20px;
+      + p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+        margin-bottom: 20px;
+      }
+    }
+    .list__features {
+      margin-bottom: 40px;
+      figure {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: white;
+        svg {
+          color: $mainColor;
+        }
+      }
+      p {
+        font-size: 15px;
+        font-weight: 600;
+      }
+      li:last-child {
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+    .page__appLinkWrapper {
+      margin-bottom: 0;
+    }
+  }
+  .imgs__SubWrapper {
+    position: relative;
+    z-index: 10;
+    .img__subGif {
+      z-index: 2;
+      height: 440px;
+      width: 96%;
+      img {
+        border-radius: 40px;
+        height: 100%;
+      }
+    }
+    .img__dots {
+      position: absolute;
+      top: -40px;
+      left: 0px;
+      z-index: -1;
+    }
+    .img__ellipse {
+      position: absolute;
+      bottom: -84px;
+      right: -45px;
+      z-index: -1;
+    }
+  }
 }
-.need__list {
-  padding-right: 25px;
-}
-.need__list h2 {
-  font-size: 24px;
-  font-weight: 700;
-  color: #8d5da7;
-  margin-bottom: 20px;
-}
-.need__list h2 + p {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 30px;
-  margin-bottom: 20px;
-}
-.list__features {
-  margin-bottom: 40px;
-}
-.list__features figure {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: white;
-}
-.list__features figure svg {
-  color: #8d5da7;
-}
-.list__features p {
-  font-size: 15px;
-  font-weight: 600;
-}
-.list__features > li:last-child p {
-  font-size: 12px;
-}
-.what__youNeed .page__appLinkWrapper {
-  margin-bottom: 0;
-}
-.header__imgSubWrapper {
-  position: relative;
-  z-index: 10;
-}
-.img__subGif {
-  z-index: 2;
-  height: 440px;
-  width: 96%;
-}
-.img__subGif img {
-  border-radius: 40px;
-  height: 100%;
-}
-.header__imgSubWrapper .img__dots {
-  position: absolute;
-  top: -40px;
-  left: 0px;
-  z-index: -1;
-}
-.header__imgSubWrapper .img__ellipse {
-  position: absolute;
-  bottom: -84px;
-  right: -45px;
-  z-index: -1;
-}
+
 .special__apps {
   padding-top: 190px;
   padding-bottom: 120px;
-}
-.special__apps h2 {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-.special__apps h2 + p {
-  font-size: 14px;
-  margin-bottom: 40px;
-}
-.special__apps .page__appLinkWrapper {
-  margin-top: 40px;
-}
-.special__apps .page__appLink {
-  background-color: white;
-}
-.special__apps .page__appLink span {
-  font-size: 16px;
-  font-weight: 400;
-}
-.special__apps .page__appLink span:last-child {
-  font-size: 14px;
-  padding-right: 10px;
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    + p {
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+  }
+  .page__appLinkWrapper {
+    margin-top: 40px;
+    .page__appLink {
+      background-color: white;
+      span {
+        font-size: 16px;
+        font-weight: 400;
+        &:last-child {
+          font-size: 14px;
+          padding-right: 10px;
+        }
+      }
+    }
+  }
 }
 </style>

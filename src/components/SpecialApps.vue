@@ -37,43 +37,47 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .app__info {
   background-color: #f7f7f7;
   border-radius: 10px;
   padding: 30px 23px;
-}
-.app__infoName {
-  margin-bottom: 16px;
-}
-.app__infoName h5 {
-  font-size: 16px;
-  font-weight: 600;
-  color: #8d5da7;
-  margin-bottom: 11px;
-}
-.app__infoRate {
-  padding-right: 22px;
-}
-.app__infoRate span:first-child {
-  color: #ffd12f;
-  font-size: 13px;
-}
-.app__infoRate span:last-child {
-  color: #45a787;
-  font-size: 14px;
-  padding-right: 5px;
-}
-.app__infoDevBy h6 {
-  font-size: 14px;
-}
-.app__infoDevBy h6 span:first-child {
-  font-weight: 600;
-}
-.app__infoDevBy h6 span:last-child {
-  color: #6d6d6d;
-}
-.app__infoDescription p {
-  font-size: 12px;
+  .app__infoName {
+    margin-bottom: 16px;
+    h5 {
+      font-size: 16px;
+      font-weight: 600;
+      color: $mainColor;
+      margin-bottom: 11px;
+    }
+    .app__infoRate {
+      padding-right: 22px;
+      span:first-child {
+        color: #ffd12f;
+        font-size: 13px;
+      }
+      span:last-child {
+        color: #45a787;
+        font-size: 14px;
+        padding-right: 5px;
+      }
+    }
+    .app__infoDevBy {
+      h6 {
+        font-size: 14px;
+        span:first-child {
+          font-weight: 600;
+        }
+        span:last-child {
+          color: #6d6d6d;
+        }
+      }
+    }
+  }
+  .app__infoDescription {
+    p {
+      font-size: 12px;
+    }
+  }
 }
 </style>

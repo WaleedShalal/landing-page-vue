@@ -33,7 +33,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .scroll__button {
   position: fixed;
   left: 5px;

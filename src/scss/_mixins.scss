@@ -1,0 +1,24 @@
+/* ------------------------------- BREAKPOINTS ------------------------------ */
+@mixin responsiveScreen($screenSize) {
+  @if ($screenSize == $smallScreen) {
+    @media #{$smallScreen} {
+      @content;
+    }
+  } @else if(($screenSize == $mediumScreen)) {
+    @media #{$mediumScreen} {
+      @content;
+    }
+  } @else if(($screenSize == $largeScreen)) {
+    @media #{$largeScreen} {
+      @content;
+    }
+  } @else if(($screenSize == $extraLargeScreen)) {
+    @media #{$extraLargeScreen} {
+      @content;
+    }
+  } @else if(($screenSize == $extraExtraLargeScreen)) {
+    @media #{$extraExtraLargeScreen} {
+      @content;
+    }
+  }
+}

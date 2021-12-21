@@ -28,25 +28,31 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .main__footer {
   padding-top: 30px;
   padding-bottom: 90px;
   background-color: #835d9d;
-}
-.footer__logo {
-  margin-bottom: 35px;
-}
-.footer__socialLinks > li:not(:first-child) {
-  padding-right: 45px;
-}
-.footer__socialLinks > li > a {
-  color: white;
-}
-.footer__socialLinks > li > a svg {
-  transition: all 0.3s ease-in-out;
-}
-.footer__socialLinks > li > a:hover svg {
-  transform: translateY(-5px);
+  .footer__logo {
+    margin-bottom: 35px;
+  }
+  .footer__socialLinks {
+    li {
+      &:not(:first-child) {
+        padding-right: 45px;
+      }
+      a {
+        color: white;
+        svg {
+          transition: all 0.3s ease-in-out;
+        }
+        &:hover {
+          svg {
+            transform: translateY(-5px);
+          }
+        }
+      }
+    }
+  }
 }
 </style>

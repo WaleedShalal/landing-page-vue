@@ -18,7 +18,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav pe-0 mx-auto">
+        <ul class="navbar__linkList navbar-nav pe-0 mx-auto">
           <li class="navbar__link">
             <router-link to="/">الرئيسية</router-link>
           </li>
@@ -43,11 +43,15 @@ export default {
 };
 </script>
 
-<style scoped>
-.navbar__link:not(:last-of-type) {
-  padding-left: 100px;
-}
-.navbar__link a {
-  color: black;
+<style lang="scss" scoped>
+.navbar__linkList {
+  .navbar__link {
+    &:not(:last-of-type) {
+      padding-left: 100px;
+    }
+    a {
+      color: black;
+    }
+  }
 }
 </style>
