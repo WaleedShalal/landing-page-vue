@@ -9,6 +9,6 @@ library.add(fab, fas);
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "normalize.css";
-import "./styles/main.css";
+import "./styles/main.scss";
 
 createApp(App).component("fa", FontAwesomeIcon).use(router).mount("#app");
