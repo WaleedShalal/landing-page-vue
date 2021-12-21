@@ -37,4 +37,6 @@ fontawesome : npm i --save @fortawesome/fontawesome-svg-core
               npm i --save @fortawesome/vue-fontawesome@prerelease
               npm i --save @fortawesome/free-brands-svg-icons
               npm i --save @fortawesome/free-regular-svg-icons
+scss : npm install -D sass-loader@^10 sass
+
 
