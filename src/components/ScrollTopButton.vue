@@ -1,7 +1,7 @@
 <template>
   <button
     v-show="isScrolled"
-    class="scroll__button d-flex justify-content-center align-items-center"
+    class="scroll__button justify-content-center align-items-center"
     @click="scrollToTop"
   >
     <fa :icon="['fas', 'arrow-up']" />
@@ -40,6 +40,7 @@ export default {
 <style lang="scss" scoped>
 .scroll__button {
   position: fixed;
+  display: flex;
   left: 5px;
   bottom: 5px;
   width: 45px;
@@ -47,7 +48,7 @@ export default {
   border-radius: 50%;
   background-color: #ffd04c;
   border: none;
-  font-size: 25px;
+  font-size: 23px;
   color: #835d9d;
   z-index: 100;
 }
