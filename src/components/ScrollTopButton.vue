@@ -20,7 +20,7 @@ export default {
       });
     },
     getPageYOffset: function () {
-      window.onscroll = function () {
+      window.onscroll = () => {
         let distanceFromTop = window.pageYOffset;
         this.isScrolled = distanceFromTop > 0 ? true : false;
         return this.isScrolled;
